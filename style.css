@@ -110,8 +110,19 @@ main {
         }
     }
 }
-
-
+.exam-container {
+    align-self: flex-start;
+    display: flex; 
+    flex-flow: column wrap;
+    justify-items: flex-start;
+    & > ul {
+        list-style-type: none;
+        & > li {
+            padding-left: 3.5rem;
+        }
+    }
+}
+/* Media Queries*/
 @media only screen and (max-width: 768px) {
     .question-container {
         grid-template-columns: 50vw;
