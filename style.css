@@ -15,9 +15,56 @@ nav{
     width: 100%;
     background-color: red;
     height: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-around;
+    & > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 15%;
+        flex: 1.1;
+    }
 }
-main{
+main {
     width: 100%;
     background-color: green;
     height: 90%;
+}
+.container {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.question-container {
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: repeat(4, 65%);
+    align-items: center;
+    justify-content: center;
+    grid-template-rows:  1fr;
+    gap: 15px;    
+    & > div {
+        border: 1px solid black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .question-container {
+        grid-template-columns: 50vw;
+        grid-template-rows: repeat(4, 25%);
+
+    }
 }
