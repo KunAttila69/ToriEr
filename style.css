@@ -12,6 +12,10 @@ body{
     flex-direction: column;
     background-color: #c8d9e3;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
 
 nav{
     color: white;
@@ -70,6 +74,16 @@ main {
     justify-content: center;
     align-self: center;
 }
+#main-menu {
+    display: flex;
+    flex-flow: column wrap;
+
+}
+.config {
+    display: flex;
+    flex-flow: column wrap;
+
+}
 .container {
     display: flex;
     width: 90%;
@@ -110,6 +124,14 @@ main {
         }
     }
 }
+img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+.events > li{
+    margin: 15px 0;
+}
 .exam-container {
     align-self: flex-start;
     display: flex; 
@@ -132,6 +154,10 @@ main {
     nav > h2 {
         margin-top: 5px;
     }
+    img {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 @media only screen and (max-width: 425px) { 
@@ -147,5 +173,12 @@ main {
     }
     nav {
         height: 15%;
+    }
+    #question-header {
+        margin: auto;
+    }
+    img {
+        width: 150px;
+        height: 150px;
     }
 }
