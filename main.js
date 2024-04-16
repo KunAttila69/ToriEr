@@ -21,9 +21,11 @@ const LoadData = () => {
     return themes
 }
 
-const AnswerQuestion = (header, answers, value) => {
-    if (answers.filter(x => x.event === header).date == value) {
-        alert("jó")
+const AnswerQuestion = (e,header, answers, value) => { 
+    if (answers.find(x => x.event === header).date == value) {
+        alert("asd")
+    }else{
+        alert("nem jó")
     }
 }
 
@@ -51,12 +53,17 @@ const ReturnQuestion = () => {
     questionContainer.classList.add("question-container")
 
     answers.sort(() => .5 - Math.random()).forEach(answer => {
-        const answerButton = document.createElement("button")
+        const answerButton = document.createElement("div")
         answerButton.innerText = answer.date
-        answerButton.addEventListener("click", () => {
-            AnswerQuestion(selectedQuestion.event,answers,answer.data)
+        answerButton.addEventListener("click", (e) => {
+            AnswerQuestion(e,selectedQuestion.event,answers,answer.date)
         })
+        questionContainer.appendChild(answerButton)
     })
+    quiz.innerHTML = ""
+    quiz.appendChild(imageContainer)
+    quiz.appendChild(questionHeader)
+    quiz.appendChild(questionContainer)
 }
 
 ReturnQuestion()
