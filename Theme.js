@@ -1,7 +1,7 @@
 class Theme{
-    constructor(theme,data){
+    constructor(theme,events){
         this.theme = theme
-        this.data = data
+        this.events = events
         this.isChecked = true
     }
 }
