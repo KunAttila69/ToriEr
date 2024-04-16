@@ -46,9 +46,14 @@ const ReturnQuestion = () => {
     
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
     const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
-
+    
     const imageContainer = document.createElement("div")
     imageContainer.classList.add("images")
+    selectedQuestion.pics.forEach(pic => {
+        const img = document.createElement("img")
+        img.src = pic
+        imageContainer.appendChild(img)
+    })
 
     const questionHeader = document.createElement("h2")
     questionHeader.classList.add("question-header")
