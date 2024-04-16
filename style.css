@@ -110,6 +110,9 @@ main {
         }
     }
 }
+.events > li{
+    margin: 15px 0;
+}
 .exam-container {
     align-self: flex-start;
     display: flex; 
