@@ -16,8 +16,16 @@ nav{
     background-color: red;
     height: 10%;
 }
-main{
+main {
     width: 100%;
     background-color: green;
     height: 90%;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-flow: column nowrap;
+    
 }
