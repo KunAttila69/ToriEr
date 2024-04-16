@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -84,10 +85,11 @@ main {
 .question-container {
     display: grid;
     margin-top: 5%;
-    grid-template-columns: repeat(4, 65%);
+    grid-template-columns: repeat(2, 325px);
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    grid-template-rows:  1fr;
+    max-width: fit-content;
     gap: 15px;    
     & > div {
         border: 1px solid transparent;
