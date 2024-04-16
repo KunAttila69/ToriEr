@@ -27,7 +27,7 @@ Hunyadiak kora; Mettől meddig uralkodott I. Ulászló?; 1440-1444; images/hunya
 Hunyadiak kora; Mikor győzte le Hunyadi János Mezid bég hadseregét Erdélyben?; 1442; images/hunyadiak3.jpg
 Hunyadiak kora; Mikor volt a téli hosszú hadjárat?; 1443-1444; images/hunyadiak4.jpg
 Hunyadiak kora; Mikor ismerték el a kiskorú V. László uralmát?; 1444; images/hunyadiak5.jpg
-Hunyadiak kora; Mikor nevezték ki kormányzónak Hunyadi Jánost?; 1446; images/hunadiak6.jpg
+Hunyadiak kora; Mikor nevezték ki kormányzónak Hunyadi Jánost?; 1446; images/hunyadiak6.jpg
 Hunyadiak kora; Mikor volt a 2. rigómezei csata?; 1448; images/hunyadiak7.jpg
 Hunyadiak kora; Mikor győztunk a Nándorfehérvári ostromban?; 1456. júl. 21.; images/hunyadiak8.jpg
 Hunyadiak kora; Mikor végezték ki Hunyadi Lászlót?; 1457; images/hunyadiak9.jpg
