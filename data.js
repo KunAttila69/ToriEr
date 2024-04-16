@@ -1,17 +1,17 @@
-const text = `Nemzeti szocializmus; Mikor robbant ki a polgári demokratikus forradalom Németországban? ;1918;
-Nemzeti szocializmus; Mikor próbálják a kommunisták átvenni a hatalmat Berlinben?; 1919;
-Nemzeti szocializmus; Mikor volt a Weimari gyűlés?; 1919-1933;
-Nemzeti szocializmus; Mikor verik le a müncheni sörpuccsot?; 1923;
-Nemzeti szocializmus; Mikor kezsődött a Nácizmus?; 1933;
-Nemzeti szocializmus; Mikor volt népszavazás a Saar vidéken?; 1934;
-Nemzeti szocializmus; Mikortól része Németországnak a Saar vidék?; 1935;
-Nemzeti szocializmus; Mikor volt az Anschluss?; 1938;
-Nemzeti szocializmus; Mikor kötötték meg a müncheni egyezményt?; 1938. szept. 29-30.
-Nemzeti szocializmus; Mikor jött rá Anglia és Franciaország Hitler igazi céljára?; 1939. márc. 15.
+const text = `Nemzeti szocializmus; Mikor robbant ki a polgári demokratikus forradalom Németországban?; 1918; https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLAZPoULEUSPciEa5ZqDXsqDQ73bVNwCZ5U2YgGLs3tg&s
+Nemzeti szocializmus; Mikor próbálják a kommunisták átvenni a hatalmat Berlinben?; 1919; https://site-426690.mozfiles.com/files/426690/Normaemeles__Berlin__1953.png
+Nemzeti szocializmus; Mikor volt a Weimari gyűlés?; 1919-1933; https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxdvGPOJgb0BiRPh0maIfppnPSRAbWYJLMwnvUkybDQ&s
+Nemzeti szocializmus; Mikor verik le a müncheni sörpuccsot?; 1923; https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJq4YaK_nI5ok09D1cAMpYBbewCbYrVumHIPtRucegvg&s
+Nemzeti szocializmus; Mikor kezsődött a Nácizmus?; 1933; https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lKtfLKS1ih6ArPz0qn_tBNso1JY4e2HAg5aAhh88_w&s
+Nemzeti szocializmus; Mikor volt népszavazás a Saar vidéken?; 1934; https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Deutschland_Lage_des_Saarlandes.svg/1200px-Deutschland_Lage_des_Saarlandes.svg.png
+Nemzeti szocializmus; Mikortól része Németországnak a Saar vidék?; 1935; https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/S_L.svg/200px-S_L.svg.png
+Nemzeti szocializmus; Mikor volt az Anschluss?; 1938; https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Anschluss_Heldenplatz1.jpg/1200px-Anschluss_Heldenplatz1.jpg
+Nemzeti szocializmus; Mikor kötötték meg a müncheni egyezményt?; 1938. szept. 29-30.; https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa8Syg7lrcszNQxpquaTtSy6BDTCOgpA2oed8jG4B02Q&s
+Nemzeti szocializmus; Mikor jött rá Anglia és Franciaország Hitler igazi céljára?; 1939. márc. 15.; 
 Nemzeti szocializmus; Mikor alakul meg a jobboldali pártok szövetsége (Harzburgi Front)?; 1931;
 Nemzeti szocializmus; Mikor nyeri meg Hitler pártja a választást?; 1932;
-Nemzeti szocializmus; Mikor lesz Hitler birodalmi kancellár?; 1933. jan. 30.
-Nemzeti szocializmus; Mikor volt a hosszúkések éjszakája?; 1934. jún. 19-30.
+Nemzeti szocializmus; Mikor lesz Hitler birodalmi kancellár?; 1933. jan. 30.;
+Nemzeti szocializmus; Mikor volt a hosszúkések éjszakája?; 1934. jún. 19-30.;
 Nemzeti szocializmus; Mikor hal meg Hindenburg és lesz Hitler vezér és kancellár?; 1934;
 A kommunista diktatúra kiépítése és működése Magyarországon; Mikor volt a Szovjet megszállás?; 1944;
 A kommunista diktatúra kiépítése és működése Magyarországon; Mikor alapították meg a Magyar Függetlenségi Forintot?; 1944. dec. 2.;
