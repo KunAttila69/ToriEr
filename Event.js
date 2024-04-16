@@ -1,6 +1,6 @@
 class Event{
-    constructor(tetel,event,date,pics){
-        this.tetel = tetel,
+    constructor(theme,event,date,pics){
+        this.theme = theme,
         this.event = event,
         this.date = date,
         this.pics = pics

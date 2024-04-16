@@ -1,18 +1,24 @@
 
 const LoadData = () => {
-    let questions = text.map(line => {
+    //Get all the events from the data.js file
+    let questions = text.split("\n").map(line => {
         line = line.split(";")
-        let kepek = []
+        let pics = []
         for (let i = 3; i < line.length; i++) {
-            kepek.push(line[i])
+            pics.push(line[i])
         }
-        return new Tetel(line[0],line[1],line[2],kepek)
+        return new Event(line[0],line[1],line[2],pics)
     });
-    
-    let tetelek = new Set()
+    //Get all themes
+    let themeNames = new Set()
     questions.forEach(question => {
-        tetelek.add(question.tetel)
+        themeNames.add(question.theme)
     });
+
+    let themes = []
+    themeNames.forEach(theme => {
+        themes.push(new Theme(theme,questions.filter(x=> x.theme == theme)))
+    }) 
 }
 
 let data = LoadData();
