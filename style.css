@@ -126,8 +126,8 @@ main {
 }
 img {
     object-fit: cover;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
 }
 .events > li{
     margin: 15px 0;
