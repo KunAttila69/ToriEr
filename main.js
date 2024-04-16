@@ -27,6 +27,12 @@ const AnswerQuestion = (e,header, answers, value) => {
         e.target.style.background = "green"
     }else{
         e.target.style.background = "red"
+        document.querySelectorAll(".answer-button").forEach(button => { 
+            if (answers.find(x => x.event === header).date == " "+button.innerText) {
+                button.style.color = "#fff"
+                button.style.background = "green"
+            }
+        })
     }
     setTimeout(() => {
         ReturnQuestion()
@@ -68,6 +74,7 @@ const ReturnQuestion = () => {
         answerButton.addEventListener("click", (e) => {
             AnswerQuestion(e,selectedQuestion.event,answers,answer.date)
         })
+        answerButton.classList.add("answer-button")
         questionContainer.appendChild(answerButton)
     })
     quiz.innerHTML = ""
