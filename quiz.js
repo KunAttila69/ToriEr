@@ -12,7 +12,7 @@ const AnswerQuestion = (e,header, answers, value) => {
         })
     }
     setTimeout(() => {
-        ReturnQuestion()
+        ReturnQuestion(data)
     }, 1000);
 }
 
