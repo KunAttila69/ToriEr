@@ -24,7 +24,7 @@ A kommunista diktatúra kiépítése és működése Magyarországon; Mikor egye
 A kommunista diktatúra kiépítése és működése Magyarországon; Mikor jött létre a Magyar Függetlenségi Népfront?; 1949;
 Hunyadiak kora; Mettől meddig uralkodott Habsburg Albert?; 1437-1439;
 Hunyadiak kora; Mettől meddig uralkodott I. Ulászló?; 1440-1444;
-Hunyadiak kora; Mikor győzte le Hunyadi János mezeid bég hadseregét Erdélyben?; 1442;
+Hunyadiak kora; Mikor győzte le Hunyadi János Mezeid bég hadseregét Erdélyben?; 1442;
 Hunyadiak kora; Mikor volt a téli hosszú hadjárat?; 1443-1444;
 Hunyadiak kora; Mikor ismerték el a kiskorú V. László uralmát?; 1444;
 Hunyadiak kora; Mikor nevezték ki kormányzónak Hunyadi Jánost?; 1446;

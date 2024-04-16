@@ -22,11 +22,15 @@ const LoadData = () => {
 }
 
 const AnswerQuestion = (e,header, answers, value) => { 
+    e.target.style.color = "#fff"
     if (answers.find(x => x.event === header).date == value) {
-        alert("asd")
+        e.target.style.background = "green"
     }else{
-        alert("nem jó")
+        e.target.style.background = "red"
     }
+    setTimeout(() => {
+        ReturnQuestion()
+    }, 1000);
 }
 
 let data = LoadData();
@@ -39,7 +43,8 @@ const ReturnQuestion = () => {
         })
     }) 
 
-    const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop();
+    
+    const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
     const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
 
     const imageContainer = document.createElement("div")
