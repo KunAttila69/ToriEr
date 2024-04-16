@@ -35,5 +35,4 @@ Hunyadiak kora; Mettől meddig uralkodott Hunyadi Mátyás?; 1458-1490;
 Hunyadiak kora; Mikor vette be Mátyás Jajcát?; 1463;
 Hunyadiak kora; Mikor foglalta el Mátyás Szabácsot?; 1476;
 Hunyadiak kora; Mikor győzte le Kinizsi Pál a betörő törököt Kenyérmezőnél?; 1479;
-Hunyadiak kora; Mikor foglalate el Mátyás bécset?; 1485; 
-`
+Hunyadiak kora; Mikor foglalate el Mátyás bécset?; 1485; `
