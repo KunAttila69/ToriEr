@@ -21,6 +21,12 @@ const LoadData = () => {
     return themes
 }
 
+const AnswerQuestion = (header, answers, value) => {
+    if (answers.filter(x => x.event === header).date == value) {
+        alert("jó")
+    }
+}
+
 let data = LoadData();
 
 const ReturnQuestion = () => {
@@ -29,22 +35,28 @@ const ReturnQuestion = () => {
         theme.events.forEach(event => {
             allQuestions.push(event)
         })
-    })
-    console.log(allQuestions) 
-    /*
-        <div class="images"></div>
-        <h2 id="question-header">Foo question</h2>
-        <div class="question-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
-    */
+    }) 
+
+    const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop();
+    const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
+
     const imageContainer = document.createElement("div")
     imageContainer.classList.add("images")
 
+    const questionHeader = document.createElement("h2")
+    questionHeader.classList.add("question-header")
+    questionHeader.innerText = selectedQuestion.event
 
+    const questionContainer = document.createElement("div")
+    questionContainer.classList.add("question-container")
+
+    answers.sort(() => .5 - Math.random()).forEach(answer => {
+        const answerButton = document.createElement("button")
+        answerButton.innerText = answer.date
+        answerButton.addEventListener("click", () => {
+            AnswerQuestion(selectedQuestion.event,answers,answer.data)
+        })
+    })
 }
 
 ReturnQuestion()

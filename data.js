@@ -12,5 +12,4 @@ Nemzeti szocializmus; Mikor alakul meg a jobboldali pártok szövetsége (Harzbu
 Nemzeti szocializmus; Mikor nyeri meg Hitler pártja a választást?; 1932;
 Nemzeti szocializmus; Mikor lesz Hitler birodalmi kancellár?; 1933. jan. 30.
 Nemzeti szocializmus; Mikor volt a hosszúkések éjszakája?; 1934. jún. 19-30.
-Nemzeti szocializmus; Mikor hal meg Hindenburg és lesz Hitler vezér és kancellár?; 1934;
-`
+Nemzeti szocializmus; Mikor hal meg Hindenburg és lesz Hitler vezér és kancellár?; 1934;`
