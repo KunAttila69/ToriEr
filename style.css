@@ -67,12 +67,9 @@ main {
 }
 #question-header {
     text-align: center;
-    border: 2px solid black;
-    height: 4em;
+    padding: 1%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    align-self: center;
 }
 #main-menu {
     display: flex;
@@ -94,6 +91,7 @@ main {
     align-items: center;
     background-color: #fff;
     box-shadow: 10px 10px 0 #2b2b2b;
+
 }
 
 .question-container {
@@ -104,6 +102,7 @@ main {
     align-items: center;
     justify-content: center;
     max-width: fit-content;
+    padding: 5px;
     gap: 15px;    
     & > div {
         border: 1px solid transparent;
@@ -126,8 +125,8 @@ main {
 }
 img {
     object-fit: cover;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
 }
 .events > li{
     margin: 15px 0;
@@ -167,15 +166,9 @@ img {
     nav > ul {
         justify-content: center;
         height: 5vh;
-        & > li  {
-            
-        }
     }
     nav {
         height: 15%;
-    }
-    #question-header {
-        margin: auto;
     }
     img {
         width: 150px;
