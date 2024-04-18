@@ -1,4 +1,4 @@
-/*
+
 const State = {
     Main : "Main",
     Quiz : "Quiz",
@@ -11,11 +11,15 @@ const Question = {
     Incorrect : 0
 };
 let currentState = State.Quiz;
-*/
+
 const AnswerQuestion = (e,header, answers, value) => { 
     e.target.style.color = "#fff"
+    document.querySelectorAll(".answer-button").forEach(button => { 
+        button.style.pointerEvents = "none";
+    })
     if (answers.find(x => x.event === header).date == value) {
         e.target.style.background = "green"
+        
     }else{
         e.target.style.background = "red"
         document.querySelectorAll(".answer-button").forEach(button => { 
@@ -58,16 +62,17 @@ const ReturnQuestion = (data) => {
     
     const questionContainer = document.createElement("div")
     questionContainer.classList.add("question-container")
-    
+     
     answers.sort(() => .5 - Math.random()).forEach(answer => {
         const answerButton = document.createElement("div")
         answerButton.innerText = answer.date
-        answerButton.addEventListener("click", (e) => {
+        answerButton.addEventListener("click", (e) => { 
             AnswerQuestion(e,selectedQuestion.event,answers,answer.date)
         })
         answerButton.classList.add("answer-button")
         questionContainer.appendChild(answerButton)
-    })
+    }) 
+
     quiz.innerHTML = ""
     quiz.appendChild(imageContainer)
     quiz.appendChild(questionHeader)
@@ -77,4 +82,4 @@ const ReturnQuestion = (data) => {
 // Quiz - quiz
 // Main - Configure quiz
 // Finished - display quiz result
-//ReturnQuestion(data)
+    ReturnQuestion(data)
