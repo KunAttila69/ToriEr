@@ -1,6 +1,5 @@
 const data = LoadData();
-
-
+ 
 const State = {
     Main : "Main",
     Quiz : "Quiz",
