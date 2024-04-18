@@ -77,4 +77,4 @@ const ReturnQuestion = (data) => {
 // Quiz - quiz
 // Main - Configure quiz
 // Finished - display quiz result
-ReturnQuestion(data)
+//ReturnQuestion(data)
