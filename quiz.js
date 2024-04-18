@@ -1,3 +1,5 @@
+const data = LoadData();
+
 
 const State = {
     Main : "Main",
@@ -5,6 +7,7 @@ const State = {
     Finished : "Finished"
 };
 
+const numberOfQuestions = 5
 
 const Question = {
     Correct : 0,
@@ -19,7 +22,7 @@ const AnswerQuestion = (e,header, answers, value) => {
     })
     if (answers.find(x => x.event === header).date == value) {
         e.target.style.background = "green"
-        
+        Question.Correct += 1
     }else{
         e.target.style.background = "red"
         document.querySelectorAll(".answer-button").forEach(button => { 
@@ -28,22 +31,27 @@ const AnswerQuestion = (e,header, answers, value) => {
                 button.style.background = "green"
             }
         })
+        Question.Incorrect += 1
     }
     setTimeout(() => {
-        ReturnQuestion(data)
+        QuestionPage(data)
     }, 1000);
 }
 
 
-const ReturnQuestion = (data) => {
+const QuestionPage = (data) => {
+    if(Question.Correct + Question.Incorrect >= numberOfQuestions){
+        currentState = State.Finished
+        LoadPage()
+        return
+    }
     let allQuestions = []  
     data.forEach(theme => {
         theme.events.forEach(event => {
             allQuestions.push(event)
         })
     }) 
-    
-    
+     
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
     const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
     
@@ -82,4 +90,19 @@ const ReturnQuestion = (data) => {
 // Quiz - quiz
 // Main - Configure quiz
 // Finished - display quiz result
-    ReturnQuestion(data)
+
+const LoadPage = () => {
+    switch (currentState) {
+        case "Main":
+            MainPage()
+            break;
+        case "Quiz":
+            QuestionPage(data)
+            break;
+        case "Finished":
+            alert(Question)
+            break;
+    }
+}
+
+LoadPage()

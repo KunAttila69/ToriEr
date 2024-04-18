@@ -20,5 +20,4 @@ const LoadData = () => {
     })
     return themes
 }
- 
-const data = LoadData();
+
