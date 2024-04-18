@@ -1,3 +1,17 @@
+/*
+const State = {
+    Main : "Main",
+    Quiz : "Quiz",
+    Finished : "Finished"
+};
+
+
+const Question = {
+    Correct : 0,
+    Incorrect : 0
+};
+let currentState = State.Quiz;
+*/
 const AnswerQuestion = (e,header, answers, value) => { 
     e.target.style.color = "#fff"
     if (answers.find(x => x.event === header).date == value) {
@@ -37,9 +51,10 @@ const ReturnQuestion = (data) => {
         imageContainer.appendChild(img)
     })
     
-    const questionHeader = document.createElement("h2")
+    const questionHeader = document.createElement("div")
+    questionHeader.appendChild(document.createElement("h2"))
     questionHeader.classList.add("question-header")
-    questionHeader.innerText = selectedQuestion.event
+    questionHeader.children[0].innerText = selectedQuestion.event
     
     const questionContainer = document.createElement("div")
     questionContainer.classList.add("question-container")
@@ -58,5 +73,8 @@ const ReturnQuestion = (data) => {
     quiz.appendChild(questionHeader)
     quiz.appendChild(questionContainer)
 }
-
-ReturnQuestion(data)
+// Switch between states
+// Quiz - quiz
+// Main - Configure quiz
+// Finished - display quiz result
+//ReturnQuestion(data)
