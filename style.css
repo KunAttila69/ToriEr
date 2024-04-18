@@ -100,7 +100,14 @@ main {
     grid-row: 2 / span 2;
     & > button {
         width: 100%;
-        
+        border-radius: 15px;
+        height: 15%;
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: #357EC7;
+            color: #FFF;
+            cursor: pointer;
+        }
     }
 }
 #question-header {
