@@ -21,3 +21,10 @@ const LoadData = () => {
     return themes
 }
 
+const numberOfQuestions = 5
+
+const State = {
+    Main : "Main",
+    Quiz : "Quiz",
+    Finished : "Finished"
+};
