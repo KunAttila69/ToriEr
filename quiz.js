@@ -33,7 +33,7 @@ const QuestionPage = (data) => {
 
     //Select a question and select 3 other wrong answers
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
-    const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
+    const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
     
     //Load the images assigned to the question
     const imageContainer = document.createElement("div")
@@ -71,11 +71,11 @@ const QuestionPage = (data) => {
     quiz.appendChild(questionHeader)
     quiz.appendChild(questionContainer)
 }
+
 // Switch between states
 // Quiz - quiz
 // Main - Configure quiz
 // Finished - display quiz result
-
 const LoadPage = () => {
     switch (currentState) {
         case "Main":
@@ -85,7 +85,7 @@ const LoadPage = () => {
             QuestionPage(data)
             break;
         case "Finished":
-            alert(Answers)
+            console.log(Answers)
             break;
     }
 }
