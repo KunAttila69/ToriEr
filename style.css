@@ -17,7 +17,20 @@ a {
     color: white;
 }
 
-nav{
+.theme-header {
+    text-decoration: underline; 
+    text-align: center;
+}
+.centered-col {
+    display: flex; 
+    flex-direction:row; 
+    justify-content: space-around;
+}
+.centered-flex {
+    display:flex; 
+    align-items: center;
+}
+nav {
     color: white;
     background-color: #2b2b2b;
     margin-bottom: 2%;
