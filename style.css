@@ -229,6 +229,28 @@ img {
         }
     }
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    overflow: hidden;
+    height: 8px;
+    &:hover {
+        width: 10px;
+    }
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+    border-radius: 15px;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  
+}
+
+
 /* Media Queries*/
 @media only screen and (max-width: 768px) {
     .question-container {
