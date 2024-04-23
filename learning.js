@@ -23,4 +23,4 @@ const LoadLearning = (data) => {
     });
 }
 
-LoadLearning(data)
+LoadLearning(LoadData())

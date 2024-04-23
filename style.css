@@ -132,6 +132,8 @@ main {
 #quiz {
     height: max-content;
     padding-bottom: 1.2%;
+    display: flex;
+    justify-content: center;
 }
 #question-header {
     text-align: center;
@@ -181,6 +183,29 @@ main {
             color: white;
             background-color: #2b2b2b;
         }
+    }
+}
+#result {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 4%;
+    border: 1px solid black;
+    margin: auto;
+    width: 90%;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1%;
+}
+.answer-sheet {
+    display: flex;
+    flex-direction: column;
+    & > h2 {
+        text-align: center;
+        text-decoration: underline;
+    }
+    & > p {
+        color: green;
     }
 }
 img {
