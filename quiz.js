@@ -75,6 +75,21 @@ const QuestionPage = (data) => {
     quiz.appendChild(questionContainer)
 }
 
+const CalculatePoints = () => {
+    let points = 0;
+    Answers.forEach( x => {
+        if(x.correctAnswer === x.givenAnswer) points++;
+    });
+    return points;
+}
+const DisplayResults = (...points) => {
+    const resultSection = document.querySelector("#result");
+    resultSection.classList.add("container");
+    const h2 = document.createElement("h2");
+    h2.innerText = `Elértél ${points[0]}-ot a ${points[1]}-ból`
+    resultSection.appendChild(h2);
+    resultSection.appendChild((document.createElement("h2").innerHTML = `Ez ${points[2]}% teljesítmény`));
+}
 // Switch between states
 // Quiz - quiz
 // Main - Configure quiz
@@ -88,7 +103,11 @@ const LoadPage = () => {
             QuestionPage(data)
             break;
         case "Finished":
+            const Points = CalculatePoints();
+            const MaxPoints = Answers.length;
+            const Percentage = (Points / MaxPoints) * 100;
             console.log(Answers)
+            DisplayResults([Points, MaxPoints, Percentage]);
             break;
     }
 }
