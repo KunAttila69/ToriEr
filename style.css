@@ -247,7 +247,24 @@ img {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
-  
+}
+
+table {
+    
+    border: 1px solid black;
+}
+tr {
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
+}
+
+.correct {
+    background-color: green;
+}
+.incorrect {
+    background-color: red;
 }
 
 
