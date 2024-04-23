@@ -52,7 +52,7 @@ const QuestionPage = (data) => {
     imageContainer.classList.add("images")
     selectedQuestion.pics.forEach(pic => {
         const img = document.createElement("img")
-        img.src = `images/${pic}`
+        img.src = `Images/${pic}`
         imageContainer.appendChild(img)
     })
     
@@ -88,13 +88,11 @@ const DisplayResults = () => {
     document.getElementById("main-menu").style.display = "none"
     quiz.style.display = "none"
     result.style.display = "flex"
-
     const resultSection = document.querySelector("#result");
-
-    resultSection.classList.add("container");
     const h2 = document.createElement("h2");
     h2.innerText = `Elértél ${Answers.filter(x=> x.correctAnswer == x.givenAnswer).length}-t a ${Answers.length}-ból`
     resultSection.appendChild(h2);
+
 }
 // Switch between states
 // Quiz - quiz

@@ -57,8 +57,7 @@ const LoadThemes = (LoadPage) =>{
             themeBtn.addEventListener("click", () => { 
                 if (selectedThemes.includes(theme.theme)) {
                     selectedThemes.splice(selectedThemes.indexOf(theme.theme),1) 
-                    
-                    themeBtn.className = ""
+                    themeBtn.className = " "
                 }
                 else{
                     selectedThemes.push(theme.theme)
