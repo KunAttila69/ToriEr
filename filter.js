@@ -5,6 +5,11 @@ const LoadThemes = (LoadPage) =>{
     quiz.style.display = "none"
     result.style.display = "none"
 
+    
+    LoadData().forEach( x => {
+        selectedThemes.push(x.theme)
+    })
+
     const themeSelection = document.createElement("div")
     themeSelection.classList.add("config")
     themeSelection.classList.add("theme-selection")
@@ -32,10 +37,18 @@ const LoadThemes = (LoadPage) =>{
     LoadData().forEach( theme => {
         const themeBtn = document.createElement("button")
         themeBtn.innerText = theme.theme
+        themeBtn.classList.add("selected-theme")
 
         themeBtn.addEventListener("click", () => {
-            if (selectedThemes.find(x => x == theme.theme )) {
-                selectedThemes.remove()
+            if(selectedThemes.length > 1){ 
+                if (selectedThemes.includes(theme.theme)) {
+                    selectedThemes.splice(selectedThemes.indexOf(theme.theme),1)
+                    themeBtn.classList.remove(0,1)
+                }
+                else{
+                    selectedThemes.push(theme.theme)
+                    themeBtn.classList.add("selected-theme")
+                }
             }
         })
 

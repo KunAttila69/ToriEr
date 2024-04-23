@@ -87,9 +87,11 @@ main {
     display: flex;
     grid-row: 1 / span 3;
     flex-direction: column;
+    overflow-y: scroll;
     & > button {
-        height: 7.5%;
+        padding: 2%;
         border-radius: 15px;
+
         &:hover {
             cursor: pointer;
             transition: background-color 0.2s ease-in-out;
