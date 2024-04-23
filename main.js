@@ -20,7 +20,7 @@ const LoadData = () => {
     })
     return themes
 }
-const numberOfQuestions = 5
+let numberOfQuestions = 5
 
 const State = {
     Main : "Main",

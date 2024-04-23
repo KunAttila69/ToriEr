@@ -87,6 +87,7 @@ const LoadThemes = (LoadPage) =>{
     playButton.innerText = "Kvíz elkezdése" 
     playButton.addEventListener("click", () => {
         currentState = State.Quiz
+        numberOfQuestions = questionRange.value
         LoadPage()
     })
 
