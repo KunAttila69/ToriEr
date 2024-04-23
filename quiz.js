@@ -121,6 +121,9 @@ const DisplayResults = () => {
 
     Answers.forEach(x => {
         const line = document.createElement("tr")
+        
+        line.classList.add(x.correctAnswer == x.givenAnswer ? "correct" : "incorrect")
+
         const firstElement = document.createElement("td")
         firstElement.innerText = x.event
         firstElement.colSpan = "2"
