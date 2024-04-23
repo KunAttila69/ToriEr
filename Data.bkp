@@ -1,4 +1,4 @@
-const text = `[11] Nemzeti szocializmus;Polgári demokratikus forradalom Németországban;1918;nemzetszocializmus1.jfif;nemzetszocializmus16.jfif
+[11] Nemzeti szocializmus;Polgári demokratikus forradalom Németországban;1918;nemzetszocializmus1.jfif;nemzetszocializmus16.jfif
 [11] Nemzeti szocializmus;Kommunista hatalomátvétel Berlinben;1919;nemzetszocializmus2.png;nemzetszocializmus17.jpg
 [11] Nemzeti szocializmus;Weimari gyűlés;1919-1933;nemzetszocializmus3.jfif;nemzetszocializmus18.jfif
 [11] Nemzeti szocializmus;Müncheni sörpuccs leverése;1923;nemzetszocializmus4.jfif;nemzetszocializmus19.jpg
@@ -35,4 +35,4 @@ const text = `[11] Nemzeti szocializmus;Polgári demokratikus forradalom Németo
 [16] Hunyadiak kora;Jajca bevétele;1463;hunyadiak11.jfif;hunyadiak25.jfif
 [16] Hunyadiak kora;Szabács elfoglalása;1476;hunyadiak12.jpg;hunyadiak26.jpg
 [16] Hunyadiak kora;Kinizsi Pál legyőzi a törököt Kenyérmezőnél;1479;hunyadiak13.jfif;hunyadiak27.jpg
-[16] Hunyadiak kora;Bécs elfoglalása; 1485;hunyadiak14.jfif;hunyadiak28.jfif`
+[16] Hunyadiak kora;Bécs elfoglalása; 1485;hunyadiak14.jfif;hunyadiak28.jfif

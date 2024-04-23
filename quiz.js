@@ -1,7 +1,7 @@
 const data = LoadData();
 
 let Answers = [];
-let currentState = State.Quiz;
+
 
 const AnswerQuestion = (header, answers, value) => {
     //Disable buttons after inputting an answer
@@ -23,6 +23,10 @@ const AnswerQuestion = (header, answers, value) => {
 }
 
 const QuestionPage = (data) => {
+    document.getElementById("main-menu").style.display = "none"
+    quiz.style.display = "flex"
+    result.style.display = "none"
+
     //Save all questions into an array
     let allQuestions = [];
     data.forEach(theme => {
@@ -31,7 +35,7 @@ const QuestionPage = (data) => {
         })
     })
 
-    //Select a question and select 3 other wrong answers
+    //Select a question and select 4 other wrong answers
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
     const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
     
@@ -40,7 +44,7 @@ const QuestionPage = (data) => {
     imageContainer.classList.add("images")
     selectedQuestion.pics.forEach(pic => {
         const img = document.createElement("img")
-        img.src = pic
+        img.src = `images/${pic}`
         imageContainer.appendChild(img)
     })
     
@@ -72,20 +76,17 @@ const QuestionPage = (data) => {
     quiz.appendChild(questionContainer)
 }
 
-const CalculatePoints = () => {
-    let points = 0;
-    Answers.forEach( x => {
-        if(x.correctAnswer === x.givenAnswer) points++;
-    });
-    return points;
-}
-const DisplayResults = (...points) => {
+const DisplayResults = () => {
+    document.getElementById("main-menu").style.display = "none"
+    quiz.style.display = "none"
+    result.style.display = "flex"
+
     const resultSection = document.querySelector("#result");
+
     resultSection.classList.add("container");
     const h2 = document.createElement("h2");
-    h2.innerText = `Elértél ${points[0]}-ot a ${points[1]}-ból`
+    h2.innerText = `Elértél ${Answers.filter(x=> x.correctAnswer == x.givenAnswer).length}-t a ${Answers.length}-ból`
     resultSection.appendChild(h2);
-    resultSection.appendChild((document.createElement("h2").innerHTML = `Ez ${points[2]}% teljesítmény`));
 }
 // Switch between states
 // Quiz - quiz
@@ -94,17 +95,13 @@ const DisplayResults = (...points) => {
 const LoadPage = () => {
     switch (currentState) {
         case "Main":
-            MainPage()
+            LoadThemes(LoadPage)
             break;
         case "Quiz":
             QuestionPage(data)
             break;
         case "Finished":
-            const Points = CalculatePoints();
-            const MaxPoints = Answers.length;
-            const Percentage = (Points / MaxPoints) * 100;
-            console.log(Answers)
-            DisplayResults([Points, MaxPoints, Percentage]);
+            DisplayResults();
             break;
     }
 }
