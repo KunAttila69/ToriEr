@@ -12,9 +12,8 @@
     <nav>
         <h1>Töri érettségi kvíz</h1>
         <ul>
-            <li>Kvíz</li>
             <li><a href="./learning.html">Tanulás</a></li>
-            <li>Home</li>
+            <li onclick="reload()">Home</li>
         </ul>
     </nav>
     <main>
@@ -32,4 +31,9 @@
 <script src="filter.js"></script>
 <script src="main.js"></script>
 <script src="quiz.js"></script>
+<script>
+    const reload = () => {
+        location.reload();
+    }
+</script>
 </html>
