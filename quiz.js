@@ -35,7 +35,7 @@ const QuestionPage = (data) => {
         })
     })
 
-    //Select a question and select 3 other wrong answers
+    //Select a question and select 4 other wrong answers
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
     const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
     

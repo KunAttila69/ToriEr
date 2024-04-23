@@ -34,8 +34,8 @@ const LoadThemes = (LoadPage) =>{
         themeBtn.innerText = theme.theme
 
         themeBtn.addEventListener("click", () => {
-            if (condition) {
-                
+            if (selectedThemes.find(x => x == theme.theme )) {
+                selectedThemes.remove()
             }
         })
 
