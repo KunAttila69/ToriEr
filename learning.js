@@ -1,15 +1,4 @@
-const LoadLearning = (data) => {
-    /*
-    <div class="exam-container">
-        <h2 class="exam-header">Töri tétel</h2>
-            <ul class="events">
-                <li>Esemény - évszám</li>
-                <li>Esemény - évszám</li>
-                <li>Esemény - évszám</li>
-                <li>Esemény - évszám</li>
-        </ul>
-    </div>
-    */
+const LoadLearning = (data) => {  
     data.forEach(theme => {
         const examContainer = document.createElement("div")
         examContainer.classList.add("exam-container")
