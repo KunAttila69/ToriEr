@@ -125,7 +125,10 @@ main {
         }
     }
 }
-
+.selected-theme {
+    background-color: rgba(35,26,127,0.7);
+    color: white;
+}
 #quiz {
     height: max-content;
     padding-bottom: 1.2%;
