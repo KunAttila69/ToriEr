@@ -39,17 +39,16 @@ const LoadThemes = (LoadPage) =>{
         themeBtn.innerText = theme.theme
         themeBtn.classList.add("selected-theme")
 
-        themeBtn.addEventListener("click", () => {
-            if(selectedThemes.length > 1){ 
-                if (selectedThemes.includes(theme.theme)) {
-                    selectedThemes.splice(selectedThemes.indexOf(theme.theme),1)
-                    themeBtn.classList.remove(0,1)
-                }
-                else{
-                    selectedThemes.push(theme.theme)
-                    themeBtn.classList.add("selected-theme")
-                }
+        themeBtn.addEventListener("click", () => { 
+            if (selectedThemes.includes(theme.theme)) {
+                selectedThemes.splice(selectedThemes.indexOf(theme.theme),1) 
+                
+                themeBtn.className = ""
             }
+            else{
+                selectedThemes.push(theme.theme)
+                themeBtn.classList.add("selected-theme")
+            } 
         })
 
         themeSelection.appendChild(themeBtn)
@@ -99,9 +98,13 @@ const LoadThemes = (LoadPage) =>{
     const playButton = document.createElement("button")
     playButton.innerText = "Kvíz elkezdése" 
     playButton.addEventListener("click", () => {
-        currentState = State.Quiz
-        numberOfQuestions = questionRange.value
-        LoadPage()
+        if(selectedThemes.length > 0){
+            currentState = State.Quiz
+            numberOfQuestions = questionRange.value
+            LoadPage()
+        }else{
+            alert("Nincs kiválasztva tétel!")
+        }
     })
 
     playContainer.appendChild(playButton)

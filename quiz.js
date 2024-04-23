@@ -29,7 +29,7 @@ const QuestionPage = (data) => {
 
     //Save all questions into an array
     let allQuestions = [];
-    data.forEach(theme => {
+    data.filter(x => selectedThemes.includes(x.theme)).forEach(theme => {
         theme.events.forEach(event => {
             allQuestions.push(event);
         })
