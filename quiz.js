@@ -11,6 +11,7 @@ const AnswerQuestion = (header, answers, value) => {
     
     //Save the given and correct answers
     Answers.push({
+        "event": header,
         "correctAnswer": answers.find(x => x.event === header).date, 
         "givenAnswer": value
     });
@@ -37,12 +38,21 @@ const QuestionPage = (data) => {
 
     //Select a question and select 4 other wrong answers
 
-    const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
+    let askedQuestions = []
+
+    Answers.forEach(x => {
+        askedQuestions.push(allQuestions.filter(y => y.date == x.correctAnswer)[0].event)
+    }) 
+
+    const selectedQuestion = allQuestions.filter(x => !askedQuestions.includes(x.event)).sort(() => .5 - Math.random()).pop(); 
+
 
     let wrongAnswers = []
- 
+    
+    console.log(askedQuestions)
     for (let i = 0; i < 4; i++) {
         wrongAnswers.push(allQuestions.filter(x => x.theme == selectedQuestion.theme).sort(() => .5 - Math.random()).pop())
+        allQuestions.slice(allQuestions.indexOf(wrongAnswers[i]),1)
     }
 
     const answers = [wrongAnswers[0],wrongAnswers[1],wrongAnswers[2],wrongAnswers[3], selectedQuestion]
@@ -93,6 +103,38 @@ const DisplayResults = () => {
     h2.innerText = `Elértél ${Answers.filter(x=> x.correctAnswer == x.givenAnswer).length}-t a ${Answers.length}-ból`
     resultSection.appendChild(h2);
 
+    const table = document.createElement("table")
+
+    const header = document.createElement("tr")
+    const firstHeader = document.createElement("td")
+    firstHeader.innerText = "Esemény"
+    firstHeader.colSpan = "2"
+    const secondHeader = document.createElement("td")
+    secondHeader.innerText = "Helyes dátum"
+    const thirdHeader = document.createElement("td")
+    thirdHeader.innerText = "Megadott dátum"
+
+    header.appendChild(firstHeader)
+    header.appendChild(secondHeader)
+    header.appendChild(thirdHeader)
+    table.appendChild(header)
+
+    Answers.forEach(x => {
+        const line = document.createElement("tr")
+        const firstElement = document.createElement("td")
+        firstElement.innerText = x.event
+        firstElement.colSpan = "2"
+        const secondElement = document.createElement("td")
+        secondElement.innerText = x.correctAnswer
+        const thirdElement = document.createElement("td")
+        thirdElement.innerText = x.givenAnswer
+
+        line.appendChild(firstElement)
+        line.appendChild(secondElement)
+        line.appendChild(thirdElement)
+        table.appendChild(line)
+    })
+    resultSection.appendChild(table)
 }
 // Switch between states
 // Quiz - quiz

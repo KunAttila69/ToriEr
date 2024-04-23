@@ -4,9 +4,7 @@ const LoadThemes = (LoadPage) =>{
     document.getElementById("main-menu").style.display = "grid"
     quiz.style.display = "none"
     result.style.display = "none"
-
-    
-    
+ 
     const themeSelection = document.createElement("div")
     themeSelection.classList.add("config")
     themeSelection.classList.add("theme-selection")
@@ -63,6 +61,7 @@ const LoadThemes = (LoadPage) =>{
                     selectedThemes.push(theme.theme)
                     themeBtn.classList.add("selected-theme")
                 } 
+                LoadNumberOfQuestions()
             })
     
             themeSelection.appendChild(themeBtn)
@@ -85,7 +84,20 @@ const LoadThemes = (LoadPage) =>{
     const questionNum = document.createElement("p")
     questionNum.style.textAlign = "center"
     questionNum.id = "questionNum"
-    questionNum.innerText = `5/10`
+
+
+    const LoadNumberOfQuestions = () => {
+        let maxNumberOfQuestions = 0
+    
+        data.filter(x => selectedThemes.includes(x.theme)).forEach(y=>{
+            maxNumberOfQuestions += y.events.length
+        })
+        console.log(maxNumberOfQuestions)
+    
+        questionNum.innerText = maxNumberOfQuestions < 5 ? "Kevesebb mint 5 esemény van ehhez a tételhez" : `5/${maxNumberOfQuestions > 10 ? 10 : maxNumberOfQuestions}`
+    }
+
+    LoadNumberOfQuestions()
 
     centeredFlex.appendChild(questionHeader)
     centeredFlex.appendChild(questionNum)
@@ -99,6 +111,8 @@ const LoadThemes = (LoadPage) =>{
     questionRange.style.width = "100%"
     
     questionRange.addEventListener("input", (e) =>  {
+        LoadNumberOfQuestions()
+
         questionNum.innerText = `${e.target.value}/10`
     })
 
