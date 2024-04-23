@@ -1,7 +1,7 @@
 const data = LoadData();
 
 let Answers = [];
-let currentState = State.Quiz;
+
 
 const AnswerQuestion = (header, answers, value) => {
     //Disable buttons after inputting an answer
@@ -44,7 +44,7 @@ const QuestionPage = (data) => {
     imageContainer.classList.add("images")
     selectedQuestion.pics.forEach(pic => {
         const img = document.createElement("img")
-        img.src = pic
+        img.src = `images/${pic}`
         imageContainer.appendChild(img)
     })
     
@@ -76,7 +76,6 @@ const QuestionPage = (data) => {
     quiz.appendChild(questionContainer)
 }
 
-
 const DisplayResults = () => {
     document.getElementById("main-menu").style.display = "none"
     quiz.style.display = "none"
@@ -96,7 +95,7 @@ const DisplayResults = () => {
 const LoadPage = () => {
     switch (currentState) {
         case "Main":
-            LoadThemes()
+            LoadThemes(LoadPage)
             break;
         case "Quiz":
             QuestionPage(data)

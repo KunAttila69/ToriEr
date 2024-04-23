@@ -1,6 +1,6 @@
 let selectedThemes = []
 
-const LoadThemes = () =>{
+const LoadThemes = (LoadPage) =>{
     document.getElementById("main-menu").style.display = "grid"
     quiz.style.display = "none"
     result.style.display = "none"
@@ -85,10 +85,15 @@ const LoadThemes = () =>{
 
     const playButton = document.createElement("button")
     playButton.innerText = "Kvíz elkezdése" 
+    playButton.addEventListener("click", () => {
+        currentState = State.Quiz
+        LoadPage()
+    })
 
     playContainer.appendChild(playButton)
 
     document.getElementById("main-menu").appendChild(themeSelection)
     document.getElementById("main-menu").appendChild(rangeContainer)
     document.getElementById("main-menu").appendChild(playContainer)
+
 }

@@ -20,8 +20,6 @@ const LoadData = () => {
     })
     return themes
 }
-const LoadConfig = () => {
-}
 const numberOfQuestions = 5
 
 const State = {
@@ -29,3 +27,5 @@ const State = {
     Quiz : "Quiz",
     Finished : "Finished"
 };
+
+let currentState = State.Main;
