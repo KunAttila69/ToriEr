@@ -6,10 +6,7 @@ const LoadThemes = (LoadPage) =>{
     result.style.display = "none"
 
     
-    LoadData().forEach( x => {
-        selectedThemes.push(x.theme)
-    })
-
+    
     const themeSelection = document.createElement("div")
     themeSelection.classList.add("config")
     themeSelection.classList.add("theme-selection")
@@ -17,42 +14,62 @@ const LoadThemes = (LoadPage) =>{
     const themeHeader = document.createElement("h2")
     themeHeader.innerText = "Tételek száma"
     themeHeader.classList.add("theme-header")
-
+    
     const centeredCol = document.createElement("div")
     centeredCol.classList.add("centered-col")
-
+    
     const allThemes = document.createElement("p")
     allThemes.innerText = "Összes tétel"
-
+    
     const selectAllBtn = document.createElement("input")
-    selectAllBtn.type = "radio"
+    selectAllBtn.type = "checkbox"
     selectAllBtn.id = "selectAllThemes"
+    
+    selectAllBtn.addEventListener("click", () => {
+        if (selectAllBtn.checked) {
+            document.querySelectorAll(".selected-theme").forEach(x => {
+                selectedThemes = [] 
+            })
+        }else{
+            LoadData().forEach( x => {
+                selectedThemes = []
+                selectedThemes.push(x.theme)
+            })  
+        }
+        GenerateThemes(selectAllBtn.checked)
+    })
 
     centeredCol.appendChild(allThemes)
     centeredCol.appendChild(selectAllBtn)
 
-    themeSelection.appendChild(themeHeader)
-    themeSelection.appendChild(centeredCol)
     
-    LoadData().forEach( theme => {
-        const themeBtn = document.createElement("button")
-        themeBtn.innerText = theme.theme
-        themeBtn.classList.add("selected-theme")
-
-        themeBtn.addEventListener("click", () => { 
-            if (selectedThemes.includes(theme.theme)) {
-                selectedThemes.splice(selectedThemes.indexOf(theme.theme),1) 
-                
-                themeBtn.className = ""
-            }
-            else{
-                selectedThemes.push(theme.theme)
+    const GenerateThemes = (isSelected) => {
+        themeSelection.innerHTML = ""
+        themeSelection.appendChild(themeHeader)
+        themeSelection.appendChild(centeredCol)
+        LoadData().forEach( theme => {
+            const themeBtn = document.createElement("button")
+            themeBtn.innerText = theme.theme
+            if(isSelected){
                 themeBtn.classList.add("selected-theme")
-            } 
-        })
+            }
 
-        themeSelection.appendChild(themeBtn)
-    })
+            themeBtn.addEventListener("click", () => { 
+                if (selectedThemes.includes(theme.theme)) {
+                    selectedThemes.splice(selectedThemes.indexOf(theme.theme),1) 
+                    
+                    themeBtn.className = ""
+                }
+                else{
+                    selectedThemes.push(theme.theme)
+                    themeBtn.classList.add("selected-theme")
+                } 
+            })
+    
+            themeSelection.appendChild(themeBtn)
+        })
+    }
+    GenerateThemes()
 
     //------------------------------------------------------------
 
