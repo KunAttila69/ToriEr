@@ -1,7 +1,7 @@
 const data = LoadData();
 
 let Answers = [];
-let currentState = State.Main;
+let currentState = State.Quiz;
 
 const AnswerQuestion = (header, answers, value) => {
     //Disable buttons after inputting an answer
@@ -25,6 +25,7 @@ const AnswerQuestion = (header, answers, value) => {
 const QuestionPage = (data) => {
     document.getElementById("main-menu").style.display = "none"
     quiz.style.display = "flex"
+    result.style.display = "none"
 
     //Save all questions into an array
     let allQuestions = [];
@@ -83,6 +84,10 @@ const CalculatePoints = () => {
     return points;
 }
 const DisplayResults = (...points) => {
+    document.getElementById("main-menu").style.display = "none"
+    quiz.style.display = "none"
+    result.style.display = "flex"
+
     const resultSection = document.querySelector("#result");
     resultSection.classList.add("container");
     const h2 = document.createElement("h2");

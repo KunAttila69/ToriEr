@@ -3,6 +3,7 @@ let selectedThemes = []
 const LoadThemes = () =>{
     document.getElementById("main-menu").style.display = "grid"
     quiz.style.display = "none"
+    result.style.display = "none"
 
     const themeSelection = document.createElement("div")
     themeSelection.classList.add("config")
