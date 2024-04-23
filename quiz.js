@@ -1,7 +1,7 @@
 const data = LoadData();
 
 let Answers = [];
-let currentState = State.Quiz;
+let currentState = State.Main;
 
 const AnswerQuestion = (header, answers, value) => {
     //Disable buttons after inputting an answer
@@ -23,6 +23,9 @@ const AnswerQuestion = (header, answers, value) => {
 }
 
 const QuestionPage = (data) => {
+    document.getElementById("main-menu").style.display = "none"
+    quiz.style.display = "flex"
+
     //Save all questions into an array
     let allQuestions = [];
     data.forEach(theme => {
@@ -79,7 +82,7 @@ const QuestionPage = (data) => {
 const LoadPage = () => {
     switch (currentState) {
         case "Main":
-            MainPage()
+            LoadThemes()
             break;
         case "Quiz":
             QuestionPage(data)
