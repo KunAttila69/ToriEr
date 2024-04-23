@@ -146,8 +146,8 @@ main {
 .question-container {
     display: grid;
     margin-top: 5%;
-    grid-template-columns: repeat(2, 325px);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 325px);
+    grid-template-rows: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
     max-width: fit-content;

@@ -20,7 +20,8 @@ const LoadData = () => {
     })
     return themes
 }
-
+const LoadConfig = () => {
+}
 const numberOfQuestions = 5
 
 const State = {
