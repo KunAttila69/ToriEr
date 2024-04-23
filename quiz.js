@@ -1,4 +1,4 @@
-const data = LoadData();
+let data = LoadData();
 
 let Answers = [];
 
@@ -36,8 +36,16 @@ const QuestionPage = (data) => {
     })
 
     //Select a question and select 4 other wrong answers
+
     const selectedQuestion = allQuestions.sort(() => .5 - Math.random()).pop(); 
-    const answers = [allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(),allQuestions.sort(() => .5 - Math.random()).pop(), selectedQuestion]
+
+    let wrongAnswers = []
+ 
+    for (let i = 0; i < 4; i++) {
+        wrongAnswers.push(allQuestions.filter(x => x.theme == selectedQuestion.theme).sort(() => .5 - Math.random()).pop())
+    }
+
+    const answers = [wrongAnswers[0],wrongAnswers[1],wrongAnswers[2],wrongAnswers[3], selectedQuestion]
     
     //Load the images assigned to the question
     const imageContainer = document.createElement("div")
